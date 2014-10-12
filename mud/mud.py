@@ -1,12 +1,17 @@
 
 """
 Text based adventure, mother fucker.
+
+Need a way to pass things into this like character and levels. This
+should be completely agnostic to custom characters, levels, monsters,
+and items and just work on anything.
 """
 
 class mud(object):
     def __init__(self, args):
         self.args = args
         self.prompt = '> '
+        self.current_room = None
 
     def run(self):
         '''
