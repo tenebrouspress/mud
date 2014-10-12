@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+import mud.mud
+from mud.parser import parser
+import os
+
+def main():
+    p = parser.parser()
+    args = p.parser.parse_args()
+    args.m(args)
+
+if __name__ == '__main__':
+    main()
+
