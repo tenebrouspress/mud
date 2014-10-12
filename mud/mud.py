@@ -26,3 +26,7 @@ class mud(object):
                 break
 
             ## do something with user_input
+
+    def load_adventure(self, adventure_file=None):
+        ## load an adventure file?
+        pass
