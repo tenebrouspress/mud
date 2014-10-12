@@ -1,6 +1,6 @@
 
 """
-Python-based mud games.
+Text based adventure, mother fucker.
 """
 
 class mud(object):
@@ -9,6 +9,11 @@ class mud(object):
         self.prompt = '> '
 
     def run(self):
+        '''
+        Run the game. This will probably end up being where most of the work
+        is centralized.
+        '''
+
         while True:
             user_input = raw_input(self.prompt)
 
