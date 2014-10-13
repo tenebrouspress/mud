@@ -12,8 +12,10 @@ setup(name='mud',
       license='GPLv3+',
       package_dir={ 'mud': 'mud' },
       packages=[
-         'mud',
-         'mud.parser'
+          'mud',
+          'mud.adventure',
+          'mud.parser',
+          'mud.room'
       ],
       scripts=[
          'bin/mud'
