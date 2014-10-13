@@ -2,8 +2,10 @@
 
 ## Running this bad boy
 
+```
    . ./bin/setup-env
    mud -a examples/sewer.json
+```
 
 ## Installation
 
@@ -14,4 +16,7 @@
 http://www.nltk.org/install.html
 
 To install the data via command line:
+
+```
    sudo python -m nltk.downloader -d /usr/share/nltk_data all
+```
