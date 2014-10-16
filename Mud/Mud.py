@@ -18,7 +18,7 @@ class Mud(object):
         self.prompt = '> '
         self.adventure = None
         if self.args.adventure_file:
-            self.adventure = self.load_adventure(self.args.adventure_file)
+            self.adventure = self.loadAdventure(self.args.adventure_file)
 
     def run(self):
         '''
@@ -38,7 +38,12 @@ class Mud(object):
             action, direction = langInterp(user_input)
             print "Action: %s\nDirection: %s" % (action, direction)
 
-    def load_adventure(self, adventure_file=None):
+    def loadAdventure(self, adventure_file=None):
+        '''
+        Load an adventure file. Returns an adventure object.
+
+        `adventure_file`: The name of the file to load.
+        '''
         adv_in = json.loads(open(adventure_file, 'r').read())
         rooms = []
         for key in adv_in['rooms']:
