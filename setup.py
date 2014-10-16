@@ -13,9 +13,9 @@ setup(name='mud',
       package_dir={ 'mud': 'mud' },
       packages=[
           'mud',
-          'mud.adventure',
-          'mud.parser',
-          'mud.room'
+          'mud.Adventure',
+          'mud.Parser',
+          'mud.Room'
       ],
       scripts=[
          'bin/mud'

@@ -3,7 +3,7 @@
 Non-player characters.
 '''
 
-class nonplayercharacter(object):
+class NonPlayerCharacter(object):
 
     def __init__(self):
         self.health = 0

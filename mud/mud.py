@@ -8,9 +8,9 @@ and items and just work on anything.
 """
 
 import json
-from adventure import adventure
-from room import room
-from parser.langInterp import *
+from Adventure import Adventure
+from Room import Room
+from Parser.langInterp import *
 
 class mud(object):
     def __init__(self, args):
@@ -42,11 +42,11 @@ class mud(object):
         adv_in = json.loads(open(adventure_file, 'r').read())
         rooms = []
         for key in adv_in['rooms']:
-            new_room = room.room()
-            new_room._id = key
-            new_room.name = adv_in['rooms'][key]['name']
-            new_room.description = adv_in['rooms'][key]['description']
-            rooms.append(new_room)
+            room = Room.Room()
+            room._id = key
+            room.name = adv_in['rooms'][key]['name']
+            room.description = adv_in['rooms'][key]['description']
+            rooms.append(room)
 
-        game_adventure = adventure.adventure(adv_in['adventure_name'], rooms, adv_in['entrance_id'])
-        return game_adventure
+        adventure = Adventure.Adventure(adv_in['adventure_name'], rooms, adv_in['entrance_id'])
+        return adventure

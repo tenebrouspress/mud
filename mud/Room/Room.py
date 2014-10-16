@@ -5,7 +5,7 @@ A room. Rooms have the following attributes:
  - ?
 '''
 
-class room(object):
+class Room(object):
 
     def __init__(self):
         self.name = None

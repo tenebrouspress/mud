@@ -3,7 +3,7 @@
 An item.
 '''
 
-class item(object):
+class Item(object):
 
     def __init__(self):
         self.name = None

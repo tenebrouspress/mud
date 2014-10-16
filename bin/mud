@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
 import mud.mud
-from mud.parser import parser
+from mud.Parser import Parser
 import os
 
 def main():
-    p = parser.parser()
+    p = Parser.Parser()
     args = p.parser.parse_args()
     args.m(args)
 

@@ -3,7 +3,7 @@
 An adventure.
 '''
 
-class adventure(object):
+class Adventure(object):
     def __init__(self, name=None, rooms=None, entrance_id=None):
         self.name = name
         self.rooms = rooms
