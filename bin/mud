@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import mud.mud
-from mud.Parser import Parser
+import Mud.Mud
+from Mud.Parser import Parser
 import os
 
 def main():

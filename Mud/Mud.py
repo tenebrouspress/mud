@@ -12,7 +12,7 @@ from Adventure import Adventure
 from Room import Room
 from Parser.langInterp import *
 
-class mud(object):
+class Mud(object):
     def __init__(self, args):
         self.args = args
         self.prompt = '> '

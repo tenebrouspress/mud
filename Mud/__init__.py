@@ -3,7 +3,7 @@
 Mud entry point.
 """
 
-from mud import mud as m
+from Mud import Mud as m
 
 def run(args):
     mud = m(args)

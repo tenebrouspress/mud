@@ -10,12 +10,12 @@ setup(name='mud',
       maintainer='Andrew Butcher',
       maintainer_email='abutcher@redhat.com',
       license='GPLv3+',
-      package_dir={ 'mud': 'mud' },
+      package_dir={ 'Mud': 'Mud' },
       packages=[
-          'mud',
-          'mud.Adventure',
-          'mud.Parser',
-          'mud.Room'
+          'Mud',
+          'Mud.Adventure',
+          'Mud.Parser',
+          'Mud.Room'
       ],
       scripts=[
          'bin/mud'
