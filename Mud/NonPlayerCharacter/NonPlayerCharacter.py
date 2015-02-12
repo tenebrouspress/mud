@@ -9,3 +9,4 @@ class NonPlayerCharacter(object):
         self.health = 0
         self.trauma = 0
         self.name = None
+        self.description = None
