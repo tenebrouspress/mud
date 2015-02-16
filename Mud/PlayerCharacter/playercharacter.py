@@ -12,4 +12,4 @@ class playercharacter(object):
         self.name = None
         self.weaponSkill = 0
         self.strength = 0
-        
+        self.initiative = 0
