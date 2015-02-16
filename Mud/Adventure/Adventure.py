@@ -15,3 +15,8 @@ class Adventure(object):
             if room._id == self.current_room:
                 current_room = room
         return current_room
+'''
+    def gotoNextRoom(self, direction=None):
+        for room in self.rooms:
+            if room.id ==
+'''

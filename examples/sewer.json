@@ -1,5 +1,5 @@
 {
-    "adventure_name": "The sewers of Magnalicon.",
+    "adventure_name": "The Sewers Of Magnalicon.",
     "entrance_id": "sewer001",
     "rooms": {
 	"sewer001": {
@@ -9,11 +9,14 @@
 	},
 	"tunnel001": {
 	    "name": "Tunnel",
-	    "description": "Your boots are thoroughly soaked with refuse as you move into the tunnel. You are in total darkness but can feel the slippery, slime coated sides of the tunnel."
-	},
+	    "description": "Your boots are thoroughly soaked with refuse as you move into the tunnel. You are in total darkness but can feel the slippery, slime coated sides of the tunnel.",
+	    "northwest": "deadend001",
+      "south": "sewer001"
+  },
   "deadend001": {
     "name": "Deadend",
-    "description": "During the time that you press forward you discover there is nowhere left to go in this direction. There is a small duct from which you can barely register the sound of squirming rats within it."
+    "description": "During the time that you press forward you discover there is nowhere left to go in this direction. There is a small duct from which you can barely register the sound of squirming rats within it.",
+    "southwest": "tunnel001"
   }
  }
 }

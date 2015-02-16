@@ -26,10 +26,11 @@ class Mud(object):
         is centralized.
         '''
 
-        if self.adventure != None:
-            print self.adventure.getCurrentRoom().description
-
         while True:
+
+            if self.adventure != None:
+                print self.adventure.getCurrentRoom().description
+
             try:
                 user_input = raw_input(self.prompt)
 
@@ -40,6 +41,7 @@ class Mud(object):
                 print "Action: %s\nDirection: %s" % (action, direction)
             except TypeError:
                 print "That is not a valid command!"
+
     def loadAdventure(self, adventure_file=None):
         '''
         Load an adventure file. Returns an adventure object.
