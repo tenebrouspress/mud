@@ -55,3 +55,10 @@ class Mud(object):
 
         adventure = Adventure.Adventure(adv_in['adventure_name'], rooms, adv_in['entrance_id'])
         return adventure
+
+    def showCharacterInfo(self, character_file=None):
+        '''
+        Display the current stats of the Character.
+        '''
+        char_input = json.loads(open(character_file, 'r').read())
+        

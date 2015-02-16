@@ -1,12 +1,18 @@
-"undead2": {
+"undead1": {
     "name": "Ghoul",
     "trauma": "1",
     "health": "1",
-    "description": "A horrable ghoul with glittering red eyes appears!"
+    "description": "A horrable ghoul with glittering red eyes appears!",
+    "weaponSkill": "2",
+    "strength": "2",
+    "initiative": "2",
 },
 "undead2": {
     "name": "Laughing Skull",
     "trauma": "2",
     "health": "2",
-    "description": "Madding laugher fills the room as a floating skull veres towards you!"
+    "description": "Madding laugher fills the room as a floating skull veres towards you!",
+    "weaponSkill": "2",
+    "strength": "2",
+    "initiative": "2",
 },
