@@ -30,14 +30,16 @@ class Mud(object):
             print self.adventure.getCurrentRoom().description
 
         while True:
-            user_input = raw_input(self.prompt)
+            try:
+                user_input = raw_input(self.prompt)
 
-            if user_input == 'quit':
-                break
+                if user_input == 'quit':
+                    break
 
-            action, direction = langInterp(user_input)
-            print "Action: %s\nDirection: %s" % (action, direction)
-
+                action, direction = langInterp(user_input)
+                print "Action: %s\nDirection: %s" % (action, direction)
+            except TypeError:
+                print "That is not a valid command!"
     def loadAdventure(self, adventure_file=None):
         '''
         Load an adventure file. Returns an adventure object.
