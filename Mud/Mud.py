@@ -42,7 +42,8 @@ class Mud(object):
                 print "That is not a valid command!"
 
             print "Action: %s\nDirection: %s" % (action, direction)
-
+            self.adventure.goToRoom(direction)
+            the_adventure = self.adventure.getCurrentRoom()
 
     def loadAdventure(self, adventure_file=None):
         '''
@@ -62,6 +63,6 @@ class Mud(object):
             room.south = adv_in['rooms'][key]['south']
             room.west = adv_in['rooms'][key]['west']
             rooms.append(room)
-            
+
         adventure = Adventure.Adventure(adv_in['adventure_name'], rooms, adv_in['entrance_id'])
         return adventure

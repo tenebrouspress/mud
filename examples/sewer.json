@@ -2,30 +2,29 @@
     "adventure_name": "The Sewers Of Magnalicon.",
     "entrance_id": "sewer001",
     "rooms": {
-	"sewer001": {
-	    "name": "Entrance",
-	    "description": "You climb through some rusty iron bars and find yourself in Magnalicon's sewer system. There is a large tunnel extending northward into darkness. The smell of the foot deep sewage flowing into the northern tunnel is almost unbearable.",
-	    "north": "tunnel001",
-      "west": "",
-      "east":"",
-      "south": ""
-
-  },
-	"tunnel001": {
-	    "name": "Tunnel",
-	    "description": "Your boots are thoroughly soaked with refuse as you move into the tunnel. You are in total darkness but can feel the slippery, slime coated sides of the tunnel.",
-	    "west": "deadend001",
-      "south": "sewer001",
-      "north":"",
-      "east":""
-  },
-  "deadend001": {
-    "name": "Deadend",
-    "description": "During the time that you press forward you discover there is nowhere left to go in this direction. There is a small duct from which you can barely register the sound of squirming rats within it.",
-    "east": "tunnel001",
-    "west": "",
-    "south": "",
-    "north": ""
-  }
- }
+	    "sewer001": {
+	       "name": "Entrance",
+	        "description": "You climb through some rusty iron bars and find yourself in Magnalicon's sewer system. There is a large tunnel extending northward into darkness. The smell of the foot deep sewage flowing into the northern tunnel is almost unbearable.",
+	         "north": "tunnel001",
+           "west": "",
+           "east":"",
+           "south": ""
+      },
+	     "tunnel001": {
+	        "name": "Tunnel",
+	         "description": "Your boots are thoroughly soaked with refuse as you move into the tunnel. You are in total darkness but can feel the slippery, slime coated sides of the tunnel.",
+	          "west": "deadend001",
+            "south": "sewer001",
+            "north":"",
+            "east":""
+      },
+      "deadend001": {
+        "name": "Deadend",
+        "description": "During the time that you press forward you discover there is nowhere left to go in this direction. There is a small duct from which you can barely register the sound of squirming rats within it.",
+        "east": "tunnel001",
+        "west": "",
+        "south": "",
+        "north": ""
+      }
+    }
 }

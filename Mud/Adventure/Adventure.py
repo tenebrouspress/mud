@@ -15,10 +15,14 @@ class Adventure(object):
             if room._id == self.current_room:
                 current_room = room
         return current_room
-'''
-    def goToNextRoom(self, direction=None):
+
+    def goToRoom(self, direction=None):
         for room in self.rooms:
-            if room.north == direction
+            if "north" == direction:
                 self.current_room = room.north
-        return current_room
-'''
+            if "south" == direction:
+                self.current_room = room.south
+            if "east" == direction:
+                self.current_room = room.east
+            if "west" == direction:
+                self.current_room = room.west
