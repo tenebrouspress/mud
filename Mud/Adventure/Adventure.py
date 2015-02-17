@@ -9,20 +9,24 @@ class Adventure(object):
         self.rooms = rooms
         self.current_room = entrance_id
 
-    def getCurrentRoom(self):
-        current_room = None
+
+    def setCurrentRoom(self, current_room=None):
+        self.current_room = current_room
+
+    def getCurrentRoom(self,current_room = None):
         for room in self.rooms:
             if room._id == self.current_room:
                 current_room = room
         return current_room
 
     def goToRoom(self, direction=None):
+        current_room = None
         for room in self.rooms:
             if "north" == direction:
-                self.current_room = room.north
+                self.setCurrentRoom(room.north)
             if "south" == direction:
-                self.current_room = room.south
+                self.setCurrentRoom(room.south)
             if "east" == direction:
-                self.current_room = room.east
+                self.setCurrentRoom(room.east)
             if "west" == direction:
-                self.current_room = room.west
+                self.setCurrentRoom(room.west)
