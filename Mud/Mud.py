@@ -27,6 +27,7 @@ class Mud(object):
         '''
         while True:
             if self.adventure != None:
+                print self.adventure.getCurrentRoom().name
                 print self.adventure.getCurrentRoom().description
             try:
                 user_input = raw_input(self.prompt)
@@ -40,7 +41,6 @@ class Mud(object):
 
             print "Action: %s\nDirection: %s" % (action, direction)
             self.adventure.goToRoom(direction)
-        
 
     def loadAdventure(self, adventure_file=None):
         '''

@@ -13,6 +13,7 @@ class Adventure(object):
     def setCurrentRoom(self, current_room=None):
         self.current_room = current_room
 
+
     def getCurrentRoom(self,current_room = None):
         for room in self.rooms:
             if room._id == self.current_room:
