@@ -2,11 +2,11 @@
     "name": "Ghoul",
     "trauma": "1",
     "health": "1",
-    "description": "A horrable ghoul with glittering red eyes appears!"
+    "description": "A horrible ghoul with glittering red eyes appears!"
 },
 "undead2": {
     "name": "Laughing Skull",
     "trauma": "2",
     "health": "2",
-    "description": "Madding laugher fills the room as a floating skull veres towards you!"
+    "description": "Maddening laughter fills the room as a floating skull veers towards you!"
 },
