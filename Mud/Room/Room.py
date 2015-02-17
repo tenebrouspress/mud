@@ -11,11 +11,7 @@ class Room(object):
         self.name = None
         self._id = None
         self.north = None
-        self.northeast = None
-        self.northwest = None
         self.east = None
         self.south = None
-        self.southeast = None
-        self.southwest = None
         self.west = None
         self.description = None

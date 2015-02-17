@@ -26,11 +26,11 @@ class Mud(object):
         is centralized.
         '''
 
+        if self.adventure != None:
+            the_adventure = self.adventure.getCurrentRoom().description
+
         while True:
-
-            if self.adventure != None:
-                print self.adventure.getCurrentRoom().description
-
+            print the_adventure
             try:
                 user_input = raw_input(self.prompt)
 
@@ -38,9 +38,11 @@ class Mud(object):
                     break
 
                 action, direction = langInterp(user_input)
-                print "Action: %s\nDirection: %s" % (action, direction)
             except TypeError:
                 print "That is not a valid command!"
+
+            print "Action: %s\nDirection: %s" % (action, direction)
+            self.adventure.goToNextRoom(direction)
 
     def loadAdventure(self, adventure_file=None):
         '''
@@ -55,6 +57,10 @@ class Mud(object):
             room._id = key
             room.name = adv_in['rooms'][key]['name']
             room.description = adv_in['rooms'][key]['description']
+            room.north = adv_in['rooms'][key]['north']
+            room.east = adv_in['rooms'][key]['east']
+            room.south = adv_in['rooms'][key]['south']
+            room.west = adv_in['rooms'][key]['west']
             rooms.append(room)
 
         adventure = Adventure.Adventure(adv_in['adventure_name'], rooms, adv_in['entrance_id'])

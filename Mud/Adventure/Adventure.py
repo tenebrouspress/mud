@@ -16,7 +16,9 @@ class Adventure(object):
                 current_room = room
         return current_room
 '''
-    def gotoNextRoom(self, direction=None):
+    def goToNextRoom(self, direction=None):
         for room in self.rooms:
-            if room.id ==
+            if room.north == direction
+                self.current_room = room.north
+        return current_room
 '''
