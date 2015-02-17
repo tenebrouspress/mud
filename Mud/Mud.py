@@ -66,3 +66,20 @@ class Mud(object):
 
         adventure = Adventure.Adventure(adv_in['adventure_name'], rooms, adv_in['entrance_id'])
         return adventure
+    '''
+    Need to figure out how to implement this better.
+    '''
+    def loadPlayer(self, player_file=None):
+        '''
+        Load a player file, and his attributes. Returns a Player object.
+        '''
+        playing_in = json.loads(open(player_file, 'r').read())
+        for key in player_in['player1']:
+            player = Player.Player()
+            player.health = player_in['player1'][key]['health']
+            player.trauma = player_in['player1'][key]['trauma']
+            player.name = player_in['player1'][key]['name']
+            player.weaponSkill = player_in['player1'][key]['weaponSkill']
+            player.strength = player_in['player1'][key]['strength']
+            player.initiative = player_in['player1'][key]['initiative']
+        return player
