@@ -20,6 +20,7 @@ class Mud(object):
         if self.args.adventure_file:
             self.adventure = self.loadAdventure(self.args.adventure_file)
 
+
     def run(self):
         '''
         Run the game. This will probably end up being where most of the work
@@ -29,18 +30,34 @@ class Mud(object):
             if self.adventure != None:
                 print self.adventure.getCurrentRoom().name
                 print self.adventure.getCurrentRoom().description
-            try:
-                user_input = raw_input(self.prompt)
 
-                if user_input == 'quit':
-                    break
+            user_input = raw_input(self.prompt)
+            if user_input == 'quit':
+                break
+            action, direction = langInterp(user_input)
+            self.doAction(action, direction)
 
-                action, direction = langInterp(user_input)
-            except TypeError:
-                print "That is not a valid command!"
 
-            print "Action: %s\nDirection: %s" % (action, direction)
+    def doAction(self, action = None, direction = None):
+        '''
+        Do what the user wanted to do.
+
+        Standard actions are:
+        - look
+        - go [direction]
+
+        `action`: The action to perform.
+        `direction`: Direction associated with the action.
+        '''
+        print "Action: %s\nDirection: %s" % (action, direction)
+        if action == 'move' and direction != None:
             self.adventure.goToRoom(direction)
+        elif action == 'look':
+            pass
+        else:
+            pass
+        return True
+
 
     def loadAdventure(self, adventure_file=None):
         '''
