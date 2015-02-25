@@ -7,7 +7,10 @@ should be completely agnostic to custom characters, levels, monsters,
 and items and just work on anything.
 """
 
-import json
+try:
+    import simplejson as json
+except ImportError:
+    import json
 from Adventure import Adventure
 from Room import Room
 from Parser.langInterp import *
