@@ -20,7 +20,7 @@
 	},
 	"deadend001": {
             "name": "Deadend",
-            "description": "During the time that you press forward you discover there is nowhere left to go in this direction. There is a small duct from which you can barely register the sound of squirming rats within.",
+            "description": "There is a small duct from which you can barely register the sound of squirming rats within.",
             "east": "tunnel001",
             "west": "",
             "south": "",

@@ -27,10 +27,18 @@ class Adventure(object):
 
     def goToRoom(self, direction=None):
         if direction == 'north':
-            self.setCurrentRoom(self.getCurrentRoom().north)
+            north = self.getCurrentRoom().north
+            if north != "":
+                self.setCurrentRoom(north)
         elif direction == 'east':
-            self.setCurrentRoom(self.getCurrentRoom().east)
+            east = self.getCurrentRoom().east
+            if east != "":
+                self.setCurrentRoom(east)
         elif direction == 'south':
-            self.setCurrentRoom(self.getCurrentRoom().south)
+            south = self.getCurrentRoom().south
+            if south != "":
+                self.setCurrentRoom(south)
         else:
-            self.setCurrentRoom(self.getCurrentRoom().west)
+            west = self.getCurrentRoom().west
+            if west != "":
+                self.setCurrentRoom(west)
