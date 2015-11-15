@@ -11,6 +11,8 @@ try:
     import simplejson as json
 except ImportError:
     import json
+import sys
+import textwrap
 from Adventure import Adventure
 from Room import Room
 from Parser.langInterp import *
@@ -20,9 +22,9 @@ class Mud(object):
         self.args = args
         self.prompt = '> '
         self.adventure = None
+        self.verbose = self.args.verbose
         if self.args.adventure_file:
             self.adventure = self.loadAdventure(self.args.adventure_file)
-
 
     def run(self):
         '''
@@ -31,8 +33,8 @@ class Mud(object):
         '''
         while True:
             if self.adventure != None:
-                print self.adventure.getCurrentRoom().name
-                print self.adventure.getCurrentRoom().description
+                print textwrap.fill("[%s]" % self.adventure.getCurrentRoom().name, 80)
+                print textwrap.fill(self.adventure.getCurrentRoom().description, 80)
 
             user_input = raw_input(self.prompt)
             if user_input == 'quit':
@@ -52,7 +54,8 @@ class Mud(object):
         `action`: The action to perform.
         `direction`: Direction associated with the action.
         '''
-        print "Action: %s\nDirection: %s" % (action, direction)
+        if self.verbose:
+            print "Action: %s\nDirection: %s" % (action, direction)
         if action == 'move' and direction != None:
             self.adventure.goToRoom(direction)
         elif action == 'look':
@@ -68,7 +71,11 @@ class Mud(object):
 
         `adventure_file`: The name of the file to load.
         '''
-        adv_in = json.loads(open(adventure_file, 'r').read())
+        try:
+            adv_in = json.loads(open(adventure_file, 'r').read())
+        except:
+            print "Unable to load adventure file %s" % adventure_file
+            sys.exit(1)
         rooms = []
         for key in adv_in['rooms']:
             room = Room.Room()
